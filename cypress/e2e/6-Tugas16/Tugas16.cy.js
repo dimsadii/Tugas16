@@ -15,9 +15,7 @@ describe('Test login', ()=>{
         loginpage.verifybaseURL();
         loginpage.inputUsername();
         loginpage.inputPassword();
-        cy.intercept('GET','https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/dashboard/employees/action-summary').as('actionsumary');
         loginpage.login_button();
-        cy.wait('@actionsumary');
         loginpage.verifyloginsuccess();
         loginpage.verifydashboard();
     
