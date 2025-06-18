@@ -1,4 +1,4 @@
-class loginpage{
+class loginPage{
     visit(){
          cy.visit('https://opensource-demo.orangehrmlive.com/');
     }
@@ -69,4 +69,4 @@ class loginpage{
     
 }   
 
-export default new loginpage()
+export default new loginPage()
