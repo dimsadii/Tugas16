@@ -7,9 +7,10 @@ describe('Reqres API Testing', () => {
             url:'https://reqres.in/api/users/606',
             failOnStatusCode: false,
               headers:{
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'x-api-key' : 'reqres-free-v1'
             }
-                /// 'x-api-key : reqres-free-v1'
+                 
 
         })   
         .then((response) => {

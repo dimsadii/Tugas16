@@ -8,12 +8,12 @@ describe('Reqres API Testing', () => {
             failOnStatusCode: false,
             body : {
                 email: "janet.weaver@reqres.in"
-
             },
               headers:{
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                 'x-api-key' : 'reqres-free-v1'
             }
-                /// 'x-api-key : reqres-free-v1'
+               
 
         })   
         .then((response) => {
