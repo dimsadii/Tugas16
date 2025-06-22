@@ -92,6 +92,9 @@ class login{
           
      }
 
+     tablefilterdirectory(){
+          cy.contains('.oxd-table-filter').should('be.visible');
+     }
 
 
 }   
