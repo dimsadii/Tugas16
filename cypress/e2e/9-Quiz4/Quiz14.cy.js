@@ -81,6 +81,10 @@ describe('Test login', ()=>{
         loginpage.verifyloginsuccess();
         loginpage.verifydashboard();
         loginpage.clickdirectory();
+        loginpage.searchEmployee();
+
 
     })
+
+
 })

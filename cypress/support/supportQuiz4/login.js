@@ -92,8 +92,13 @@ class login{
           
      }
 
-     tablefilterdirectory(){
-          cy.contains('.oxd-table-filter').should('be.visible');
+         
+     searchEmployee(){
+           cy.xpath('//input[@placeholder="Type for hints..."]').type('Chi Chi');
+           cy.intercept('GET', '**/web/index.php/api/v2/directory/employees*').as('search');
+           cy.xpath('//button[@type="submit"]').click();
+           cy.wait('@search');
+           cy.contains('Chi Chi').should('be.visible');
      }
 
 
